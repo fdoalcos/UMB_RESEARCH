@@ -1,0 +1,6 @@
+.editor-code-box {
+    border: 1px solid black;
+    width: 100%;
+    /* max-width: 50%; */
+    height: 100%;
+}
