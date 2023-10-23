@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import EditorCode from './Components/Editor/EditorCode';
+import './ComponentsCSS/App.css'
 
 function App() {
   return (
-    <div className="App">
-      <p>Hello world</p>
+    <div className="main">
+      <EditorCode />
     </div>
   );
 }
