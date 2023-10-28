@@ -21,7 +21,7 @@ export default function TextEditor(props) {
     return (
     <div className="editor-container">
         <div className="editor-header">
-            {displayName}
+            
         </div>
         <ControlledEditor 
             onBeforeChange={handleChange}
@@ -31,7 +31,7 @@ export default function TextEditor(props) {
                 lineWrapping: true,
                 lint: true,
                 mode: language,
-                theme: 'material',
+                theme: 'default',
                 lineNumbers: true
             }}
         />

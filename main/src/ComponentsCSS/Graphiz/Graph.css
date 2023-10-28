@@ -1,8 +1,33 @@
 .data-box {
     border: 1px solid black;
-    width: 100%;
+    /* width: 50%; */
+    margin-right: 10px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #C0C3C4;
+    background: var(--primary-light, #F7F9FB);
 }
+
+svg  {
+    border-radius: 8px;
+}
+.graph polygon {
+    fill: #F7F9FB;
+}
+
+
+/* .graphiz-data svg path  {
+    fill: red !important;
+} */
+
+/* path {
+    fill: red !important;
+} */
+/* 
+.graphiz-data  {
+    border-radius: 8px;
+    background-color: red !important;
+} */
