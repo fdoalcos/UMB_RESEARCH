@@ -1,0 +1,43 @@
+.editor-header {
+    border-radius: 10px 10px 0 0;
+    margin-left: 10px;
+    height: 31px;
+    background-color: #D3D4D5;  
+    border: 1px solid #C0C3C4;
+    border-bottom: none;
+}
+
+/* codemirror css */
+
+.CodeMirror-scroll {
+    border-radius: 10px;
+    position: fixed;
+}
+
+.cm-s-default .CodeMirror-scroll {
+    overflow: hidden !important;
+}
+.code-mirror-wrapper {
+    margin-left: 10px;
+}
+
+.CodeMirror {
+    border-radius: 0 0 10px 10px;
+    height: 100vh !important;
+    border: 1px solid #C0C3C4;
+    background-color:#F7F9FB;
+}
+
+.CodeMirror-sizer {
+    margin-top: 10px;
+    margin-left: 40px !important;
+}
+
+.CodeMirror-gutters {
+    border: none;
+    background-color: #F7F9FB;
+}
+
+.CodeMirror-gutter-wrapper {
+    left: -38px !important;
+}

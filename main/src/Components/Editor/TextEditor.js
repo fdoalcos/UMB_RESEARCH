@@ -3,6 +3,7 @@ import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
+import '../../ComponentsCSS/Editor/TextEditor.css'
 import { Controlled as ControlledEditor } from 'react-codemirror2'
 
 export default function TextEditor(props) {
@@ -21,7 +22,7 @@ export default function TextEditor(props) {
     return (
     <div className="editor-container">
         <div className="editor-header">
-            
+
         </div>
         <ControlledEditor 
             onBeforeChange={handleChange}

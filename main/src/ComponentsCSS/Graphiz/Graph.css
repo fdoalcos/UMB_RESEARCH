@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px;
     border: 1px solid #C0C3C4;
     background: var(--primary-light, #F7F9FB);
 }
@@ -16,6 +16,16 @@ svg  {
 }
 .graph polygon {
     fill: #F7F9FB;
+}
+
+
+.graph-header {
+    border-radius: 10px 10px 0 0;
+    margin-right: 10px;
+    height: 31px;
+    background-color: #D3D4D5;  
+    border: 1px solid #C0C3C4;
+    border-bottom: none;
 }
 
 
