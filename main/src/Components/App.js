@@ -1,64 +1,51 @@
-import EditorCode from './Editor/EditorCode';
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../ComponentsCSS/App.css'
 import TextEditor from './Editor/TextEditor';
 import Graph from './Graphiz/Graph';
+import dataJson from '../Components/Graphiz/Data/Dataset.json'
+import DropDown from './Editor/DropDown';
+import SplitPane from 'react-split-pane'
 
 function App() {
-  const data = "graph {\n    grandparent -- \"parent A\";\n    child;\n    \"parent B\" -- child;\n    grandparent --  \"parent B\";\n}"
-  const [js, setJs] = useState("graph {\n    grandparent -- \"parent A\";\n    child;\n    \"parent B\" -- child;\n    grandparent --  \"parent B\";\n}")
-  const [graphData, setGraphData] = useState("graph {\n    grandparent -- \"parent A\";\n    child;\n    \"parent B\" -- child;\n    grandparent --  \"parent B\";\n}")
-
+  const [selected, setSelected] = useState("data1")
+  const [js, setJs] = useState(dataJson[selected])
+  const [graphData, setGraphData] = useState(dataJson[selected])
+  
   function runData() {
     setGraphData(js)
   }
 
-
-  // for timeout purposes
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-
-  //   }, 250)
-  // }, js)
-
-
   return (
-    // this is before
-    // <div className="main">
-    //   <EditorCode />
-    // </div>
     <>
       <button
         onClick={runData}
       >
         Run
       </button>
-      <div className="main-column"> 
-        <div className="topPane">
+      <DropDown 
+          DataSets={dataJson}
+          setSelected={setSelected}
+          setJs={setJs}
+          setGraphData={setGraphData}
+          key={dataJson}
+      />
+        <SplitPane
+          split="vertical"
+          defaultSize={Math.floor(window.innerWidth / 2)}
+          minSize={50}
+          maxSize={-10}
+        >
           <TextEditor 
             language="javascript"
             displayName="header"
             value={js}
             onChange={setJs}
           />
-        </div>
-        <Graph 
-          GraphData={graphData}
-        />
-      </div>
-     
-      <div className="pane">
-        {/* <iframe
-          title="output"
-          sandbox="allow-scripts"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-        
-        >
-        </iframe>
-         */}
-      </div>
+          <Graph 
+            GraphData={graphData}
+            runData={runData}
+          />
+        </SplitPane>
     </>
   );
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 
-export default function DropDown({ DataSets, setSelected }) {
+export default function DropDown({ DataSets, setSelected, setJs, setGraphData }) {
   return (
     <div>
         <select
                 onChange={(e) => {
                     setSelected(e.target.value)
+                    setJs(DataSets[e.target.value])
+                    setGraphData(DataSets[e.target.value])
                 }}
             >
                 {

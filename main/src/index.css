@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background-color: #EBECED;
+    overflow-y: hidden;
+}
+
+body > iframe {
+    display: none;
+}
+
+/* .topPane { */
+    /* width: 50%; */
+    /* height: 100%;
+} */
+
+
+/* .main-column { */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* gap: 10px; */
+
+/* } */
+
+span.Resizer.vertical {
+    width: 7px;
+    background-color: #EBECED;
+} 
+
+span.Resizer.vertical:hover {
+    cursor: ew-resize; 
+}
+
+
+
+
+
+
