@@ -22,30 +22,40 @@ function App() {
       >
         Run
       </button>
-      <DropDown 
+      {/* <DropDown 
           DataSets={dataJson}
           setSelected={setSelected}
           setJs={setJs}
           setGraphData={setGraphData}
           key={dataJson}
-      />
-        <SplitPane
-          split="vertical"
-          defaultSize={Math.floor(window.innerWidth / 2)}
-          minSize={50}
-          maxSize={-10}
-        >
-          <TextEditor 
-            language="javascript"
-            displayName="header"
-            value={js}
-            onChange={setJs}
-          />
-          <Graph 
-            GraphData={graphData}
-            runData={runData}
-          />
-        </SplitPane>
+      /> */}
+      <SplitPane
+        split="vertical"
+        defaultSize={Math.floor(window.innerWidth / 2)}
+        minSize={50}
+        maxSize={-10}
+      >
+        {/* 
+          needs:
+          dataSets
+          setSelected
+          setJS
+          key
+      */}
+        <TextEditor 
+          language="javascript"
+          value={js}
+          setJs={setJs}
+          dataJson={dataJson}
+          setSelected={setSelected}
+          setGraphData={setGraphData}
+
+        />
+        <Graph 
+          GraphData={graphData}
+          runData={runData}
+        />
+      </SplitPane>
     </>
   );
 }

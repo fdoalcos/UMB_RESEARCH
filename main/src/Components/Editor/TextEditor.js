@@ -4,25 +4,30 @@ import 'codemirror/theme/material.css'
 import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 import '../../ComponentsCSS/Editor/TextEditor.css'
+import DropDown from './DropDown'
+
+
 import { Controlled as ControlledEditor } from 'react-codemirror2'
 
-export default function TextEditor(props) {
-
-    const {
-        language,
-        displayName,
-        value,
-        onChange
-    } = props
+export default function TextEditor({ language, value, setJs, dataJson, setSelected, setGraphData, key }) {
 
     function handleChange(editor, data, value) {
-        onChange(value)
+        setJs(value)
     }
 
     return (
     <div className="editor-container">
         <div className="editor-header">
-
+            {/* need to add dropdown button here to make much more reusable */}
+            {/* need to change the dropdown button from app.js to here */}
+            {/* <DropDown /> */}
+            <DropDown 
+                DataSets={dataJson}
+                setSelected={setSelected}
+                setJs={setJs}
+                setGraphData={setGraphData}
+                key={dataJson}
+            />
         </div>
         <ControlledEditor 
             onBeforeChange={handleChange}
