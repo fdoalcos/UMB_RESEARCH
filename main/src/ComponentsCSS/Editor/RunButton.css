@@ -1,0 +1,12 @@
+.run-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 84px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #39D778;   
+    border: none; 
+}

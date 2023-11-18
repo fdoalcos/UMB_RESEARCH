@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.dropdown {
+    text-align-last: center;
+    padding-left: 20px;
+    width: 138px;
+    border: none;
+    color: #1D1A1A;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.dropdown:focus {
+    border: none;
+    outline: none;
+}
+
+.dropdown-option {
+    /* width: 200px;
+    color: black;
+    padding-right: 20px; */
+    text-align: center;
+    padding: 0 30px;
+}

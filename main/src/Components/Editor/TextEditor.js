@@ -5,6 +5,8 @@ import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 import '../../ComponentsCSS/Editor/TextEditor.css'
 import DropDown from './DropDown'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 import { Controlled as ControlledEditor } from 'react-codemirror2'
@@ -18,16 +20,19 @@ export default function TextEditor({ language, value, setJs, dataJson, setSelect
     return (
     <div className="editor-container">
         <div className="editor-header">
-            {/* need to add dropdown button here to make much more reusable */}
-            {/* need to change the dropdown button from app.js to here */}
-            {/* <DropDown /> */}
-            <DropDown 
-                DataSets={dataJson}
-                setSelected={setSelected}
-                setJs={setJs}
-                setGraphData={setGraphData}
-                key={dataJson}
-            />
+            <div className="editor-header-dropdown">
+                <FontAwesomeIcon
+                    icon={faJsSquare} 
+                    className="editor-icon"
+                /> 
+                <DropDown 
+                    DataSets={dataJson}
+                    setSelected={setSelected}
+                    setJs={setJs}
+                    setGraphData={setGraphData}
+                    key={dataJson}
+                />
+            </div>
         </div>
         <ControlledEditor 
             onBeforeChange={handleChange}

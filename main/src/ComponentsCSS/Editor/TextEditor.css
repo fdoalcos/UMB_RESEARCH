@@ -1,4 +1,6 @@
 .editor-header {
+    display: flex;
+    align-items: center;
     border-radius: 10px 10px 0 0;
     margin-left: 10px;
     height: 31px;
@@ -6,6 +8,26 @@
     border: 1px solid #C0C3C4;
     border-bottom: none;
 }
+
+.editor-header-dropdown {
+    margin-left: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 31px;
+    border: 1px solid #fff;
+    border-radius: 10px 0 0 0;
+    width: 138px;
+    background-color: #fff;
+}
+
+
+.editor-icon {
+    position: absolute;
+    left: 37px;
+}
+
 
 /* codemirror css */
 

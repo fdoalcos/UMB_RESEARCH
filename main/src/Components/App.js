@@ -5,9 +5,15 @@ import Graph from './Graphiz/Graph';
 import dataJson from '../Components/Graphiz/Data/Dataset.json'
 import DropDown from './Editor/DropDown';
 import SplitPane from 'react-split-pane'
+import RunButton from './Editor/RunButton';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+// import { faCoffee, faJ } from '@fortawesome/free-solid-svg-icons'
+
+
 
 function App() {
-  const [selected, setSelected] = useState("data1")
+  const [selected, setSelected] = useState("Graph 1")
   const [js, setJs] = useState(dataJson[selected])
   const [graphData, setGraphData] = useState(dataJson[selected])
   
@@ -17,31 +23,17 @@ function App() {
 
   return (
     <>
-      <button
-        onClick={runData}
-      >
-        Run
-      </button>
-      {/* <DropDown 
-          DataSets={dataJson}
-          setSelected={setSelected}
-          setJs={setJs}
-          setGraphData={setGraphData}
-          key={dataJson}
-      /> */}
+      <div className="flex-button">
+        <RunButton 
+          runData={runData}
+        />
+      </div>
       <SplitPane
         split="vertical"
         defaultSize={Math.floor(window.innerWidth / 2)}
         minSize={50}
         maxSize={-10}
       >
-        {/* 
-          needs:
-          dataSets
-          setSelected
-          setJS
-          key
-      */}
         <TextEditor 
           language="javascript"
           value={js}

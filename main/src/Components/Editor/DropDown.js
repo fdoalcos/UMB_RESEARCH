@@ -1,9 +1,12 @@
 import React from 'react'
+import '../../ComponentsCSS/Editor/Dropdown.css'
+
 
 export default function DropDown({ DataSets, setSelected, setJs, setGraphData }) {
   return (
-    <div>
+    <div >
         <select
+                className='dropdown'
                 onChange={(e) => {
                     setSelected(e.target.value)
                     setJs(DataSets[e.target.value])
@@ -15,10 +18,12 @@ export default function DropDown({ DataSets, setSelected, setJs, setGraphData })
                         return (
                             <>
                                 <option
+                                    className="dropdown-option"
                                     key = {val}
                                     value = {key}
                                 >
-                                    {key}
+                                    
+                                    {key} 
                                 </option>
                             </>
                             
