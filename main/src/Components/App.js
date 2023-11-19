@@ -6,11 +6,20 @@ import dataJson from '../Components/Graphiz/Data/Dataset.json'
 import DropDown from './Editor/DropDown';
 import SplitPane from 'react-split-pane'
 import RunButton from './Editor/RunButton';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-// import { faCoffee, faJ } from '@fortawesome/free-solid-svg-icons'
 
-
+/**
+ * This is the main component showing the App in our web broser.
+ * 
+ * Functions:
+ * - runData(): its gonna send the string object or whatever the user types in the code editor and put it in our
+ * graph data sets which would show the graphiz data
+ * 
+ * States:
+ * - selected: whatever graph/data the user selected in the dropdown of our graph
+ * - js: whatever the users type in our data
+ * - graphData: shows what graph we are looking at using the selected data as well
+ *
+ */
 
 function App() {
   const [selected, setSelected] = useState("Graph 1")

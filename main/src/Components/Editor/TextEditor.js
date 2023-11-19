@@ -7,9 +7,23 @@ import '../../ComponentsCSS/Editor/TextEditor.css'
 import DropDown from './DropDown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
-
-
 import { Controlled as ControlledEditor } from 'react-codemirror2'
+
+/**
+ * This component renders the text editor of the app using react-codemirror2 for its version control.
+ * 
+ * Functions:
+ * - handleChange(): the purpose is to setJs whenever the data is changed by the user in the text editor.
+ * 
+ * Props:
+ * - language (string): the language is javascript for this one.
+ * - value (json object): the default value in the text editor.
+ * - setJs (function): to call the js state and change its value.
+ * - dataJson (json object): the data json in our object
+ * - setSelected (function): to select the data in our dropdown.
+ * - setGraphData (function): to set graph data
+ * - key (string): isnt really used/might need to delete
+ */
 
 export default function TextEditor({ language, value, setJs, dataJson, setSelected, setGraphData, key }) {
 

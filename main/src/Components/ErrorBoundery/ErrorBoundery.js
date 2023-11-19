@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * This component renders an error message to ensure that our graphiz data is safe to users
+ * content whenever they typed something wrong and this error boundary would immediately render
+ * the default data whenever something is wrong.
+ */
+
 class ErrorBoundery extends React.Component {
     constructor(props) {
       super(props);
