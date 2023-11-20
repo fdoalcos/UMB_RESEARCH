@@ -11,6 +11,7 @@ import { Controlled as ControlledEditor } from 'react-codemirror2'
 
 /**
  * This component renders the text editor of the app using react-codemirror2 for its version control.
+ * Whatever the users type here would affect the Graphiz data and might be an error for us
  * 
  * Functions:
  * - handleChange(): the purpose is to setJs whenever the data is changed by the user in the text editor.

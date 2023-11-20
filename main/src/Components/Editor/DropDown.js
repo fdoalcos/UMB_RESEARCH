@@ -2,7 +2,10 @@ import React from 'react'
 import '../../ComponentsCSS/Editor/Dropdown.css'
 
 /**
- * This component renders a dropdown button that is used in TextEditor components.
+ * The DropDown component is responsible for rendering a dropdown menu which 
+ * is located near the text editor. This allows users to select from a lists of
+ * DataSets, whenever the user selected the DataSets, it would just send the file 
+ * to the DataSets
  * 
  * Props:
  * - DataSets (string): The json data here.

@@ -2,7 +2,8 @@ import React from 'react'
 import '../../ComponentsCSS/Editor/RunButton.css'
 
 /**
- * This component renders the run button on our App file.
+ * This component renders a button specific to the main Application, whenever click would run the
+ * new graphiz data.
  * 
  * Props:
  * - runData (function): whenever the onClick happens, call this function to run data.
