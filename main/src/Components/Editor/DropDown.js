@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../ComponentsCSS/Editor/Dropdown.css'
+import convert from '../../Randomata/Converter'
 
 /**
  * The DropDown component is responsible for rendering a dropdown menu which 
@@ -22,7 +23,7 @@ export default function DropDown({ DataSets, setSelected, setJs, setGraphData })
                 onChange={(e) => {
                     setSelected(e.target.value)
                     setJs(DataSets[e.target.value])
-                    setGraphData(DataSets[e.target.value])
+                    setGraphData(convert(DataSets[e.target.value]))
                 }}
             >
                 {

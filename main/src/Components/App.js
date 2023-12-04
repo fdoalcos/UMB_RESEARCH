@@ -6,6 +6,7 @@ import dataJson from '../Components/Graphiz/Data/Dataset.json'
 import DropDown from './Editor/DropDown';
 import SplitPane from 'react-split-pane'
 import RunButton from './Editor/RunButton';
+import convert from '../Randomata/Converter'
 
 /**
  * This is the main component showing the App in our web broser.
@@ -22,17 +23,21 @@ import RunButton from './Editor/RunButton';
  */
 
 function App() {
-  const [selected, setSelected] = useState("Graph 1")
+  const [selected, setSelected] = useState("Code 1")
   const [js, setJs] = useState(dataJson[selected])
-  const [graphData, setGraphData] = useState(dataJson[selected])
+  const [graphData, setGraphData] = useState(convert(dataJson[selected]))
   
   function runData() {
-    setGraphData(js)
+    console.log("I AM RUNNING")
+    console.log("This is the converted in js", convert(js))
+    setGraphData(convert(js))
   }
 
   return (
     <>
-      <div className="flex-button">
+      <div
+        className="flex-button"
+      >
         <RunButton 
           runData={runData}
         />

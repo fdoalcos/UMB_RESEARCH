@@ -27,7 +27,9 @@ export default function Graph({ GraphData, runData }) {
 
     return (
         <>
-            <div className="graph-header">
+            <div 
+                className="graph-header"
+            >
                 {/* main headder here */}
             </div>
             <div
@@ -44,8 +46,7 @@ export default function Graph({ GraphData, runData }) {
                         className='graphiz-data'
                         dot = {GraphData ? GraphData : "graph { }"} 
                         options={
-                            { 
-                                
+                            {    
                                 fit: true,
                                 zoom: true, 
                                 width: {width}, 

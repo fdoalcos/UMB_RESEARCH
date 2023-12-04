@@ -29,13 +29,20 @@ import { Controlled as ControlledEditor } from 'react-codemirror2'
 export default function TextEditor({ language, value, setJs, dataJson, setSelected, setGraphData, key }) {
 
     function handleChange(editor, data, value) {
+        console.log("THIS IS THE VALUE,", value)
         setJs(value)
     }
 
     return (
-    <div className="editor-container">
-        <div className="editor-header">
-            <div className="editor-header-dropdown">
+    <div 
+        className="editor-container"
+    >
+        <div 
+            className="editor-header"
+        >
+            <div 
+                className="editor-header-dropdown"
+            >
                 <FontAwesomeIcon
                     icon={faJsSquare} 
                     className="editor-icon"

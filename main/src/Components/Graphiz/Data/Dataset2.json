@@ -1,0 +1,13 @@
+{
+    "Graph 1": "graph {\n    grandparent -- \"parent A\";\n    child;\n    \"parent B\" -- child;\n    grandparent --  \"parent B\";\n}",
+    "Graph 2": "digraph {\n    A -> B;\n    B -> C;\n    A -> C;\n    D -> C;\n    D -> E;\n    E -> A;\n}",
+    "Graph 3": "digraph {\n    rankdir=LR;\n    size=\"8,5\"\n    node [shape = circle];\n    A -> B [label=\"0.3\"];\n    B -> C [label=\"0.5\"];\n    A -> C [label=\"0.7\"];\n}",
+    "Graph 4": "graph {\n    a -- b -- c;\n    b -- d;\n}",
+    "Graph 5": "digraph {\n    subgraph cluster_0 {\n        label=\"Subgraph A\";\n        A -> B;\n        A -> C;\n    }\n    subgraph cluster_1 {\n        label=\"Subgraph B\";\n        D -> E;\n        E -> F;\n    }\n    D -> A [lhead=cluster_0 ltail=cluster_1];\n}",
+    "Graph 6": "graph {\n    edge [dir=none];\n    a -- {b c d}\n    b -- {e f}\n    c -- {g h}\n    d -- i\n}",
+    "Graph 7": "digraph {\n    A -> B [color=red];\n    B -> C [color=blue];\n    C -> D [color=green];\n}",
+    "Graph 8": "graph {\n    a -- b [weight=2];\n    a -- c [weight=1];\n    c -- d [weight=3];\n    d -- e;\n}",
+    "Graph 9": "digraph {\n    A [shape=box, color=red];\n    B [shape=ellipse, color=blue];\n    C [shape=diamond, color=green];\n    A -> B;\n    B -> C;\n}",
+    "Graph 10": "graph {\n    rankdir=TB;\n    a -- b;\n    b -- c;\n    c -- d [constraint=false];\n    d -- e;\n    e -- a;\n}"
+}
+  

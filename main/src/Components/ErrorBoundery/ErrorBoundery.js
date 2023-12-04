@@ -42,7 +42,8 @@ class ErrorBoundery extends React.Component {
         return (
           <div>
             <h1>Something went wrong!</h1>
-            { this.state.error }
+            {/* { this.state.error } */}
+            <p>recommended to start over and go back to its previous changes.</p>
           </div>
         );
       }
